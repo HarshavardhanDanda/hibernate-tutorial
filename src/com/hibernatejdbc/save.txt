@@ -1,0 +1,28 @@
+CREATE DATABASE IF NOT EXISTS `hb_student_tracker`;
+USE `hb_student_tracker`;
+
+DROP TABLE IF EXISTS `student`;
+
+CREATE TABLE `student` (
+`id` int(11) NOT NULL AUTO_INCREMENT,
+`first_name` varchar(45) DEFAULT NULL,
+`last_name` varchar(45) DEFAULT NULL,
+`email` varchar(45) DEFAULT NULL,
+PRIMARY KEY (`id`)
+)  ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+steps in hibernate process
+1. add hibernate config file
+2. annotate java class
+3. develop java code to perform database operations
+
+we have to map java class to database table using hibernate
+for mapping we have two approaches
+1. xml config file(old)
+2. java annotations(modern and preferred)
+
+java annotations has 2 steps
+1. map class to database table
+2. map fields to database columns
+
+session factory creates session objects, a session is a main object used to save objects
